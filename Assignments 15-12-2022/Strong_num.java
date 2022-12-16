@@ -4,49 +4,40 @@ import java.util.Scanner;
 
 public class Strong_num {
 
-   
-   public static boolean isStrong(int number) {
+	public static void main(String[] args) {
+		int n,i,f,x,sum=0,rem;
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		n=sc.nextInt();
+		x=n;
+		
+		
+		while(n!=0)
+		{
+			rem=n%10;
+			f=1;
+			for(i=1; i<=rem; i++)
+			{
+				f=f*i;
 
-      int sum = 0, lastDigit = 0;
-      int tempNum = number;
+			}
+		
+			sum=sum+f;
+			System.out.println(sum);
+			n=n/10;
+		}
+		
+		
+		if(sum==x)
+		{
+			System.out.println("This is a Strong Number.");
+		}
+		else 
+		{
+			System.out.println("This is not a Strong Number.");
+		}
+		
+	}
 
-
-      while(tempNum != 0) {
-          lastDigit = tempNum % 10;
-          sum += factorial(lastDigit);
-          tempNum /= 10;
-      }
-
-      
-      if(sum == number)
-          return true; 
-      return false; 
-   }
-
-   
-   public static long factorial(int n) {
-      long fact = 1;
-      for(int i=1; i<=n; i++) {
-          fact *= i;
-      }
-      return fact;
-   }
-
-   public static void main(String[] args) {
-    
-      int number = 0;
-      boolean result = false;
-      Scanner scan = new Scanner(System.in);   
-      System.out.println("Enter an integer number: ");
-      number = scan.nextInt();
-
-      
-      result = isStrong(number);
-      if(result)
-          System.out.println(number + " is a strong number.");
-      else
-          System.out.println(number + " is not a strong number");
-
-      scan.close();
-   }
 }
