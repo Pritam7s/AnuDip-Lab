@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Simple_interest{
 public static void main(String[] args){
-int p,t,r,sum;
+int p,t,r,sum=0;
 
 Scanner sc= new Scanner(System.in);
 System.out.println("Enter amount: ");
