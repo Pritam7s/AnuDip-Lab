@@ -15,9 +15,11 @@ System.out.println("Double: "+myDouble);
 int num = (int)myDouble;
 System.out.println("Integer: "+num);
 System.out.println("-------------------------");
+/*
 float x,y,z;
 y=c;z=d;
 x=(y/z);
+*/
 x=(float)c/(float)d;
 System.out.println(x);
 }
