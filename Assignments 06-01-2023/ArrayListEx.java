@@ -28,7 +28,19 @@ public class ArrayListEx {
 		list.replaceAll(x -> x+5);	//x is unary operator (we can set anything in place of x)
 		System.out.println(list);
 
+		//Printing using For Each Loop
+		System.out.println("Printing using For each loop: ");
+		for(Integer a: list) {
+			System.out.println(a);
+		}
 		
+		//using while loop
+		int count=0;
+		System.out.println("Using while loop: ");
+		while(count<list.size()) {
+			System.out.println(list.get(count));
+			count++;
+		}
 	}
 
 }
