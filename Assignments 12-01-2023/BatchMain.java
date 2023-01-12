@@ -9,6 +9,7 @@ public class BatchMain {
 		System.out.println("");
 		int choice, ch;
 		Scanner sc = new Scanner(System.in);
+		BatchService batch = new BatchService();
 		
 		do {
 			System.out.println("Enter Your Choice: 1>Java  2>AWS  3>other  4>Exit");
@@ -19,6 +20,25 @@ public class BatchMain {
 					System.out.println("--- JAVA ---");
 					System.out.println("1>Enter Student Info \n2>Show Student Info \n3>Update Student Info");
 					ch = sc.nextInt();
+					switch(ch) {
+						case 1:
+							batch.javaStudentInfo();
+							System.out.println();
+							break;
+							
+						case 2:
+							batch.getAllJavaStudentDetails();
+							System.out.println();
+							break;
+							
+						case 3:
+							batch.updateJavaStudentInfo();
+							System.out.println();
+							break;
+							
+						default:
+							System.out.println("Wrong Input!!!");
+					}
 				
 					break;
 				
