@@ -2,7 +2,7 @@ package multi_threading;
 
 class ShowData{
 	void multi(int n) {
-		synchronized(ShowData.class) {		//static synchronized same as this...
+		synchronized(ShowData.class) {		
 			for(int i=1;i<=5;i++) {
 				System.out.println(n+" * "+i+" = "+(n*i));
 				try {
