@@ -18,7 +18,7 @@ public class ExceptionHandlingDemo {
 			System.out.println("Length of String: "+str.length());
 			int i=Integer.parseInt(str);
 		}
-		catch(ArithmeticException e) {
+		catch(ArithmeticException e) {		//exceptions with messages
 			System.out.println("Error: "+e.getMessage());
 		}
 		catch(NullPointerException n) {
@@ -31,7 +31,7 @@ public class ExceptionHandlingDemo {
 			System.out.println("Any Error: "+p.getMessage());
 		}
 		
-		//rest of the code---
+		// Rest of the Codes
 		System.out.println("Rest of the Code: -----");
 		int x=30, y=50;
 		System.out.println("Addition of X & Y : "+(x+y));
